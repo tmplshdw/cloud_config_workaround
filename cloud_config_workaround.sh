@@ -19,6 +19,10 @@ case ${SteamAppId} in
         CONFIG_PATH="Documents/The Witcher 3"
         CONFIG="user.settings"
         ;;
+    32360)
+        CONFIG_PATH="Application Data/LucasArts/The Secret of Monkey Island Special Edition"
+        CONFIG="Settings.ini"
+        ;;
     *)
         CONFIG="error"
         ;;

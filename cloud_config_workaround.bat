@@ -20,6 +20,10 @@ if %SteamAppId%==499450 (
             set "GAMECONFIGDIR=Documents\The Witcher 3"
             set "GAMECONFIG=user.settings"
 )
+if %SteamAppId%==32360 (
+            set "GAMECONFIGDIR=Application Data\LucasArts\The Secret of Monkey Island Special Edition"
+            set "GAMECONFIG=Settings.ini"
+)
 
 set "CONFIGPATH=%USERPROFILE%\%GAMECONFIGDIR%\%GAMECONFIG%"
 
