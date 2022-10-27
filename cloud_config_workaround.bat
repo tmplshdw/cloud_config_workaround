@@ -24,6 +24,10 @@ if %SteamAppId%==32360 (
             set "GAMECONFIGDIR=Application Data\LucasArts\The Secret of Monkey Island Special Edition"
             set "GAMECONFIG=Settings.ini"
 )
+if %SteamAppId%==1151640 (
+            set "GAMECONFIGDIR=Documents\Horizon Zero Dawn\Saved Game\profile"
+            set "GAMECONFIG=graphicsconfig.ini"
+)
 
 set "CONFIGPATH=%USERPROFILE%\%GAMECONFIGDIR%\%GAMECONFIG%"
 

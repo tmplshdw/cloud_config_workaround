@@ -23,6 +23,10 @@ case ${SteamAppId} in
         CONFIG_PATH="Application Data/LucasArts/The Secret of Monkey Island Special Edition"
         CONFIG="Settings.ini"
         ;;
+    1151640)
+        CONFIG_PATH="Documents/Horizon Zero Dawn/Saved Game/profile"
+        CONFIG="graphicsconfig.ini"
+        ;;
     *)
         CONFIG="error"
         ;;
