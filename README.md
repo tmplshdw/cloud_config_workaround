@@ -5,6 +5,7 @@ Currently works for:
 * Witcher 3
 * Sekiro
 * The Secret of Monkey Island: Special Edition
+* Horizon Zero Dawn
 
 Please create a new issue for other games that also need a workaround
 
