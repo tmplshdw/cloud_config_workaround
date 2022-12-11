@@ -3,9 +3,13 @@ setlocal
 
 :: get Documents folder from registry ( will work even with onedrive )
 for /f "tokens=2*" %%a in ('reg query "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Personal') do set DOCUMENTS=%%b
+:: Reparse the variable
+call set "DOCUMENTS=%DOCUMENTS%"
 
 :: get Appdata folder from registry
 for /f "tokens=2*" %%a in ('reg query "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v AppData') do set APPDATA=%%b
+:: Reparse the variable
+call set "APPDATA=%APPDATA%"
 
 :: location to keep good local config files
 set "GOODCONFIGSDIR=%DOCUMENTS%\game_configs"
