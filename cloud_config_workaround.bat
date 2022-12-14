@@ -16,7 +16,11 @@ call set "APPDATA=%APPDATA%"
 set "GOODCONFIGSDIR=%DOCUMENTS%\game_configs"
 
 :: create a directory to keep good config file
+if exist "%GOODCONFIGSDIR%\%SteamAppId%\" (
+    echo Using %GOODCONFIGSDIR%\%SteamAppId%\ directory
+) else (
 mkdir "%GOODCONFIGSDIR%\%SteamAppId%"
+)
 
 set "GAMEEXE="""
 
@@ -57,17 +61,19 @@ exit
 
 :waitprocesstostart
 echo Waiting for %GAMEEXE% to start
+:loopwaitprocesstostart
 :: wait for game to start ( usefull if the game has a launcher )
 FOR /F %%x IN ('tasklist /NH /FI "IMAGENAME eq %GAMEEXE%"') DO IF %%x == %GAMEEXE% goto waitprocesstoend
-TIMEOUT /T 3
-goto waitprocesstostart
+TIMEOUT /T 3 /nobreak >nul
+goto loopwaitprocesstostart
 
 :waitprocesstoend
 echo Waiting for %GAMEEXE% to end
+:loopwaitprocesstoend
 :: wait for game to end
 FOR /F %%x IN ('tasklist /NH /FI "IMAGENAME eq %GAMEEXE%"') DO IF %%x NEQ %GAMEEXE% goto saveconfig
-TIMEOUT /T 3
-goto waitprocesstoend
+TIMEOUT /T 3 /nobreak >nul
+goto loopwaitprocesstoend
 
 :workaround
 echo Applying Workaround
