@@ -38,6 +38,10 @@ if %SteamAppId%==1151640 (
             set "GAMECONFIGDIR=%DOCUMENTS%\Horizon Zero Dawn\Saved Game\profile"
             set "GAMECONFIG=graphicsconfig.ini"
 )
+if %SteamAppId%==1313140 (
+            set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Massive Monster\Cult Of The Lamb\saves"
+            set "GAMECONFIG=settings.json"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 

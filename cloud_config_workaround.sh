@@ -27,6 +27,10 @@ case ${SteamAppId} in
         CONFIG_PATH="Documents/Horizon Zero Dawn/Saved Game/profile"
         CONFIG="graphicsconfig.ini"
         ;;
+    1313140)
+        CONFIG_PATH="AppData/LocalLow/Massive Monster/Cult Of The Lamb/saves"
+        CONFIG="settings.json"
+        ;;
     *)
         CONFIG="error"
         ;;
@@ -41,7 +45,7 @@ echo "game config file: ${GAME_CONFIG_PATH}" >> ${LOGFILE} 2>&1
 if [ "${CONFIG}" = "error" ]; then # run the game without workaround
     echo "error" >> ${LOGFILE} 2>&1
     "$@" # filled in with %command% (game executable stuff) and any other launch options
-else 
+else
     # copy the wanted config file to the location used by game
     cp -v "${GOOD_CONFIGS_PATH}/${SteamAppId}/${CONFIG}" "${GAME_CONFIG_PATH}" >> "${LOGFILE}" 2>&1
 
@@ -50,4 +54,3 @@ else
     # save any config changes you made in-game for next time
     cp -v "${GAME_CONFIG_PATH}" "${GOOD_CONFIGS_PATH}/${SteamAppId}/" >> "${LOGFILE}" 2>&1
 fi
-
