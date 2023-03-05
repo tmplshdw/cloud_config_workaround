@@ -42,6 +42,10 @@ if %SteamAppId%==1313140 (
             set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Massive Monster\Cult Of The Lamb\saves"
             set "GAMECONFIG=settings.json"
 )
+if %SteamAppId%==524220 (
+            set "GAMECONFIGDIR=%DOCUMENTS%\My Games\NieR_Automata"
+            set "GAMECONFIG=SystemData.dat"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 
