@@ -31,6 +31,10 @@ case ${SteamAppId} in
         CONFIG_PATH="AppData/LocalLow/Massive Monster/Cult Of The Lamb/saves"
         CONFIG="settings.json"
         ;;
+    524220)
+        CONFIG_PATH="Documents/My Games/NieR_Automata"
+        CONFIG="SystemData.dat"
+        ;;
     *)
         CONFIG="error"
         ;;
