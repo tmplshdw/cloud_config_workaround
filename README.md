@@ -6,6 +6,8 @@ Currently works for:
 * Sekiro
 * The Secret of Monkey Island: Special Edition
 * Horizon Zero Dawn
+* Cult of the Lamb
+* NieR:Automata
 
 Please create a new issue for other games that also need a workaround
 
