@@ -42,6 +42,10 @@ if %SteamAppId%==1313140 (
             set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Massive Monster\Cult Of The Lamb\saves"
             set "GAMECONFIG=settings.json"
 )
+if %SteamAppId%==1687950 (
+            set "GAMECONFIGDIR=%APPDATA%\SEGA\P5R\%64BitSteamID%\savedata\SYSTEM"
+            set "GAMECONFIG=SYSTEM.DAT"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 

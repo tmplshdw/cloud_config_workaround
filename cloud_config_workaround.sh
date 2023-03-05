@@ -31,6 +31,10 @@ case ${SteamAppId} in
         CONFIG_PATH="AppData/LocalLow/Massive Monster/Cult Of The Lamb/saves"
         CONFIG="settings.json"
         ;;
+    1687950)
+        CONFIG_PATH="AppData/Roaming/SEGA/P5R/Steam/${64BitSteamID}/savedata/SYSTEM"
+        CONFIG="SYSTEM.DAT"
+        ;;
     *)
         CONFIG="error"
         ;;
