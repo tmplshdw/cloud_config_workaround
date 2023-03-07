@@ -35,6 +35,10 @@ case ${SteamAppId} in
         CONFIG_PATH="Documents/My Games/NieR_Automata"
         CONFIG="SystemData.dat"
         ;;
+    757310)
+        CONFIG_PATH="AppData/LocalLow/Shedworks/Sable/SaveData"
+        CONFIG="SettingsManager"
+        ;;
     *)
         CONFIG="error"
         ;;

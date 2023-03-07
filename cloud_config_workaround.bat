@@ -46,6 +46,10 @@ if %SteamAppId%==524220 (
             set "GAMECONFIGDIR=%DOCUMENTS%\My Games\NieR_Automata"
             set "GAMECONFIG=SystemData.dat"
 )
+if %SteamAppId%==757310 (
+            set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Shedworks\Sable\SaveData" 
+            set "GAMECONFIG=SettingsManager"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 
