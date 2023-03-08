@@ -9,6 +9,12 @@ WIN_USER_PATH="pfx/drive_c/users/steamuser"
 # create a directory to keep good config file
 mkdir -p "${GOOD_CONFIGS_PATH}/${SteamAppId}"
 
+# horrible kludge to get steamid
+STEAMID=$(grep -Pzo '"'${SteamUser}'"\s+{\s+"SteamID"\s+"[0-9]+"' /home/${USER}/.local/share/Steam/config/config.vdf | grep --text -oP '(?<=\s")[0-9]+')
+
+# get SteamID3 version by converting 64 Bit SteamID
+SteamID3=$((${STEAMID}-76561197960265728))
+
 # get location of config file used in game based on steam appid
 case ${SteamAppId} in
     814380)
@@ -34,6 +40,10 @@ case ${SteamAppId} in
     524220)
         CONFIG_PATH="Documents/My Games/NieR_Automata"
         CONFIG="SystemData.dat"
+        ;;
+    1295510)
+        CONFIG_PATH="Documents/My Games/DRAGON QUEST XI S/Steam/${SteamID3}/Saved/SaveGames/Book"
+        CONFIG="system999.sav"
         ;;
     *)
         CONFIG="error"
