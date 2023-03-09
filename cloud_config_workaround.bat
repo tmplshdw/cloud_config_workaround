@@ -49,6 +49,10 @@ if %SteamAppId%==524220 (
             set "GAMECONFIGDIR=%DOCUMENTS%\My Games\NieR_Automata"
             set "GAMECONFIG=SystemData.dat"
 )
+if %SteamAppId%==757310 (
+            set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Shedworks\Sable\SaveData" 
+            set "GAMECONFIG=SettingsManager"
+)
 if %SteamAppId%==1295510 (
             set "GAMECONFIGDIR=%DOCUMENTS%\My Games\DRAGON QUEST XI S\Steam\%SteamID3%\Saved\SaveGames\Book"
             set "GAMECONFIG=system999.sav"

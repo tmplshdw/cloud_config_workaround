@@ -8,6 +8,7 @@ Currently works for:
 * Horizon Zero Dawn
 * Cult of the Lamb
 * NieR:Automata
+* Sable
 * DRAGON QUEST XI S: Echoes of an Elusive Age – Definitive Edition
 
 Please create a new issue for other games that also need a workaround
