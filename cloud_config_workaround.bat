@@ -17,6 +17,9 @@ set "GOODCONFIGSDIR=%DOCUMENTS%\game_configs"
 :: create a directory to keep good config file
 mkdir "%GOODCONFIGSDIR%\%SteamAppId%"
 
+:: get SteamID3 version by converting 64 Bit SteamID with powershell
+for /f "delims=" %%a in ('powershell.exe -command "$result=%STEAMID%-76561197960265728; Write-Output $result"') do set SteamID3=%%a
+
 :: get location of config file used in game based on steam appid
 if %SteamAppId%==814380 (
             set "GAMECONFIGDIR=%APPDATA%\Sekiro"
@@ -42,8 +45,20 @@ if %SteamAppId%==1313140 (
             set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Massive Monster\Cult Of The Lamb\saves"
             set "GAMECONFIG=settings.json"
 )
+if %SteamAppId%==524220 (
+            set "GAMECONFIGDIR=%DOCUMENTS%\My Games\NieR_Automata"
+            set "GAMECONFIG=SystemData.dat"
+)
+if %SteamAppId%==757310 (
+            set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Shedworks\Sable\SaveData" 
+            set "GAMECONFIG=SettingsManager"
+)
+if %SteamAppId%==1295510 (
+            set "GAMECONFIGDIR=%DOCUMENTS%\My Games\DRAGON QUEST XI S\Steam\%SteamID3%\Saved\SaveGames\Book"
+            set "GAMECONFIG=system999.sav"
+)
 if %SteamAppId%==1687950 (
-            set "GAMECONFIGDIR=%APPDATA%\SEGA\P5R\%64BitSteamID%\savedata\SYSTEM"
+            set "GAMECONFIGDIR=%APPDATA%\SEGA\P5R\%STEAMID%\savedata\SYSTEM"
             set "GAMECONFIG=SYSTEM.DAT"
 )
 
