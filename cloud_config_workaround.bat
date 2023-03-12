@@ -57,6 +57,10 @@ if %SteamAppId%==1295510 (
             set "GAMECONFIGDIR=%DOCUMENTS%\My Games\DRAGON QUEST XI S\Steam\%SteamID3%\Saved\SaveGames\Book"
             set "GAMECONFIG=system999.sav"
 )
+if %SteamAppId%==1687950 (
+            set "GAMECONFIGDIR=%APPDATA%\SEGA\P5R\Steam\%STEAMID%\savedata\SYSTEM"
+            set "GAMECONFIG=SYSTEM.DAT"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 

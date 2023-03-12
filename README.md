@@ -10,6 +10,7 @@ Currently works for:
 * NieR:Automata
 * Sable
 * DRAGON QUEST XI S: Echoes of an Elusive Age – Definitive Edition
+* Persona 5 Royal
 
 Please create a new issue for other games that also need a workaround
 

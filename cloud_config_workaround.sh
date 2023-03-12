@@ -49,6 +49,10 @@ case ${SteamAppId} in
         CONFIG_PATH="Documents/My Games/DRAGON QUEST XI S/Steam/${SteamID3}/Saved/SaveGames/Book"
         CONFIG="system999.sav"
         ;;
+    1687950)
+        CONFIG_PATH="Application Data/SEGA/P5R/Steam/${STEAMID}/savedata/SYSTEM"
+        CONFIG="SYSTEM.DAT"
+        ;;
     *)
         CONFIG="error"
         ;;
