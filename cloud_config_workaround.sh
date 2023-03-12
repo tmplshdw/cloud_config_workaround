@@ -50,7 +50,7 @@ case ${SteamAppId} in
         CONFIG="system999.sav"
         ;;
     1687950)
-        CONFIG_PATH="AppData/Roaming/SEGA/P5R/Steam/${STEAMID}/savedata/SYSTEM"
+        CONFIG_PATH="Application Data/SEGA/P5R/Steam/${STEAMID}/savedata/SYSTEM"
         CONFIG="SYSTEM.DAT"
         ;;
     *)

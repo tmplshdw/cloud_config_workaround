@@ -58,7 +58,7 @@ if %SteamAppId%==1295510 (
             set "GAMECONFIG=system999.sav"
 )
 if %SteamAppId%==1687950 (
-            set "GAMECONFIGDIR=%APPDATA%\SEGA\P5R\%STEAMID%\savedata\SYSTEM"
+            set "GAMECONFIGDIR=%APPDATA%\SEGA\P5R\Steam\%STEAMID%\savedata\SYSTEM"
             set "GAMECONFIG=SYSTEM.DAT"
 )
 
