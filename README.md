@@ -11,6 +11,7 @@ Currently works for:
 * Sable
 * DRAGON QUEST XI S: Echoes of an Elusive Age – Definitive Edition
 * Persona 5 Royal
+* Klonoa Phantasy Reverie Series
 
 Please create a new issue for other games that also need a workaround
 
