@@ -61,6 +61,10 @@ if %SteamAppId%==1687950 (
             set "GAMECONFIGDIR=%APPDATA%\SEGA\P5R\Steam\%STEAMID%\savedata\SYSTEM"
             set "GAMECONFIG=SYSTEM.DAT"
 )
+if %SteamAppId%==1730680 (
+            set "GAMECONFIGDIR=%LOCALAPPDATA%\Bandai Namco Entertainment/KLONOAencore\Saved\SaveGames\%SteamID3%"
+            set "GAMECONFIG=System.bin"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 

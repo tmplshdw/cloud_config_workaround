@@ -53,6 +53,10 @@ case ${SteamAppId} in
         CONFIG_PATH="Application Data/SEGA/P5R/Steam/${STEAMID}/savedata/SYSTEM"
         CONFIG="SYSTEM.DAT"
         ;;
+    1730680)
+        CONFIG_PATH="AppData/Local/Bandai Namco Entertainment/KLONOAencore/Saved/SaveGames/${SteamID3}"
+        CONFIG="System.bin"
+        ;;
     *)
         CONFIG="error"
         ;;
