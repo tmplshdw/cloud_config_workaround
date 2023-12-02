@@ -62,7 +62,7 @@ if %SteamAppId%==1687950 (
             set "GAMECONFIG=SYSTEM.DAT"
 )
 if %SteamAppId%==1730680 (
-            set "GAMECONFIGDIR=%APPDATA%\Local\Bandai Namco Entertainment/KLONOAencore\Saved\SaveGames\%SteamID3%"
+            set "GAMECONFIGDIR=%LOCALAPPDATA%\Bandai Namco Entertainment/KLONOAencore\Saved\SaveGames\%SteamID3%"
             set "GAMECONFIG=System.bin"
 )
 
