@@ -57,6 +57,10 @@ case ${SteamAppId} in
         CONFIG_PATH="AppData/Local/Bandai Namco Entertainment/KLONOAencore/Saved/SaveGames/${SteamID3}"
         CONFIG="System.bin"
         ;;
+    990080)
+        CONFIG_PATH="AppData/Local/Hogwarts Legacy/Saved/SaveGames/${SteamID3}"
+        CONFIG="SavedUserOptions.sav"
+        ;;
     *)
         CONFIG="error"
         ;;
