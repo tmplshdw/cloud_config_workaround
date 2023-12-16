@@ -65,6 +65,10 @@ if %SteamAppId%==1730680 (
             set "GAMECONFIGDIR=%LOCALAPPDATA%\Bandai Namco Entertainment/KLONOAencore\Saved\SaveGames\%SteamID3%"
             set "GAMECONFIG=System.bin"
 )
+if %SteamAppId%==990080 (
+            set "GAMECONFIGDIR=%USERPROFILE%\AppData\Local\Hogwarts Legacy\Saved\SaveGames\%SteamID3%"
+            set "GAMECONFIG=SavedUserOptions.sav"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 
