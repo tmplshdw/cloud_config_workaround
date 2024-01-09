@@ -13,6 +13,7 @@ Currently works for:
 * Persona 5 Royal
 * Klonoa Phantasy Reverie Series
 * Hogwarts Legacy
+* CRISIS CORE –FINAL FANTASY VII– REUNION
 
 Please create a new issue for other games that also need a workaround
 
