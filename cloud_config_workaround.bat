@@ -69,6 +69,10 @@ if %SteamAppId%==990080 (
             set "GAMECONFIGDIR=%USERPROFILE%\AppData\Local\Hogwarts Legacy\Saved\SaveGames\%SteamID3%"
             set "GAMECONFIG=SavedUserOptions.sav"
 )
+if %SteamAppId%==1608070 (
+            set "GAMECONFIGDIR=%DOCUMENTS%\My Games\CRISIS CORE FINAL FANTASY VII REUNION\Steam\%STEAMID%"
+            set "GAMECONFIG=SAVEDATA_SYSTEM.sav"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 
