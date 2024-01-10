@@ -61,6 +61,10 @@ case ${SteamAppId} in
         CONFIG_PATH="AppData/Local/Hogwarts Legacy/Saved/SaveGames/${SteamID3}"
         CONFIG="SavedUserOptions.sav"
         ;;
+    1608070)
+        CONFIG_PATH="Documents/My Games/CRISIS CORE FINAL FANTASY VII REUNION/Steam/${STEAMID}"
+        CONFIG="SAVEDATA_SYSTEM.sav"
+        ;;
     *)
         CONFIG="error"
         ;;
