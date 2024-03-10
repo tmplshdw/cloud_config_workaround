@@ -73,6 +73,10 @@ if %SteamAppId%==1608070 (
             set "GAMECONFIGDIR=%DOCUMENTS%\My Games\CRISIS CORE FINAL FANTASY VII REUNION\Steam\%STEAMID%"
             set "GAMECONFIG=SAVEDATA_SYSTEM.sav"
 )
+if %SteamAppId%==1850570 (
+            set "GAMECONFIGDIR=%LOCALAPPDATA%\KojimaProductions\DeathStrandingDC\%SteamID3%"
+            set "GAMECONFIG=game_settings.cfg"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 
