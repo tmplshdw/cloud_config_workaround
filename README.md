@@ -27,7 +27,6 @@ Add the launch option to the relevant game
 
 `/path/to/download/cloud_config_workaround.sh %command%`
 
-
 ### Windows
 
 Download the script somewhere
