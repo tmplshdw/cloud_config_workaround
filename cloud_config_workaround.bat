@@ -50,7 +50,7 @@ if %SteamAppId%==524220 (
             set "GAMECONFIG=SystemData.dat"
 )
 if %SteamAppId%==1113560 (
-            set "GAMECONFIGDIR=%DOCUMENTS%\My Games\NieR Replicant ver.1.22474487139\Steam\%SteamID3%"
+            set "GAMECONFIGDIR=%DOCUMENTS%\My Games\NieR Replicant ver.1.22474487139\Steam\%STEAMID%"
             set "GAMECONFIG=drawing_settings.ini"
 )
 if %SteamAppId%==757310 (
