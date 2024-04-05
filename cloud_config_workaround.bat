@@ -49,8 +49,12 @@ if %SteamAppId%==524220 (
             set "GAMECONFIGDIR=%DOCUMENTS%\My Games\NieR_Automata"
             set "GAMECONFIG=SystemData.dat"
 )
+if %SteamAppId%==1113560 (
+            set "GAMECONFIGDIR=%DOCUMENTS%\My Games\NieR Replicant ver.1.22474487139\Steam\%STEAMID%"
+            set "GAMECONFIG=drawing_settings.ini"
+)
 if %SteamAppId%==757310 (
-            set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Shedworks\Sable\SaveData" 
+            set "GAMECONFIGDIR=%USERPROFILE%\AppData\LocalLow\Shedworks\Sable\SaveData"
             set "GAMECONFIG=SettingsManager"
 )
 if %SteamAppId%==1295510 (
