@@ -70,10 +70,7 @@ case ${SteamAppId} in
         CONFIG="SAVEDATA_SYSTEM.sav"
         ;;
     1850570)
-        CONFIG_PATH="AppData/Local/KojimaProductions/DeathStrandingDC/${SteamID3}"
-        CONFIG="game_settings.cfg"
-        ;;
-    1850570)
+    #     CONFIG_PATH="AppData/Local/KojimaProductions/DeathStrandingDC/${SteamID3}"
         CONFIG_PATH="AppData/Local/KojimaProductions/DeathStranding/${SteamID3}/profile"
         CONFIG="game_settings.cfg"
         ;;

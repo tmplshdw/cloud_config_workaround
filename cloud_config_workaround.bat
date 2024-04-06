@@ -81,6 +81,10 @@ if %SteamAppId%==1850570 (
             set "GAMECONFIGDIR=%LOCALAPPDATA%\KojimaProductions\DeathStrandingDC\%SteamID3%"
             set "GAMECONFIG=game_settings.cfg"
 )
+if %SteamAppId%==2337640 (
+            set "GAMECONFIGDIR=%USERPROFILE%\AppData\Local\PinballM\Saved\SaveGames\%STEAMID%"
+            set "GAMECONFIG=settings.sav"
+)
 
 set "CONFIGPATH=%GAMECONFIGDIR%\%GAMECONFIG%"
 

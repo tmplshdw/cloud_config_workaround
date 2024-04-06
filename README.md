@@ -16,6 +16,7 @@ Currently works for:
 * Hogwarts Legacy
 * CRISIS CORE –FINAL FANTASY VII– REUNION
 * DEATH STRANDING DIRECTOR'S CUT
+* Pinball M
 
 Please create a new issue for other games that also need a workaround
 
