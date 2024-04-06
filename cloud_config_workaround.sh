@@ -69,6 +69,10 @@ case ${SteamAppId} in
         CONFIG_PATH="Documents/My Games/CRISIS CORE FINAL FANTASY VII REUNION/Steam/${STEAMID}"
         CONFIG="SAVEDATA_SYSTEM.sav"
         ;;
+    2337640)
+        CONFIG_PATH="AppData/Local/PinballM/Saved/SaveGames/${STEAMID}"
+        CONFIG="settings.sav"
+        ;;
     *)
         CONFIG="error"
         ;;
