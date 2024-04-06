@@ -77,7 +77,7 @@ if %SteamAppId%==1608070 (
             set "GAMECONFIGDIR=%DOCUMENTS%\My Games\CRISIS CORE FINAL FANTASY VII REUNION\Steam\%STEAMID%"
             set "GAMECONFIG=SAVEDATA_SYSTEM.sav"
 )
-if %SteamAppId%==(
+if %SteamAppId%==2337640 (
             set "GAMECONFIGDIR=%USERPROFILE%\AppData\Local\PinballM\Saved\SaveGames\%STEAMID%"
             set "GAMECONFIG=settings.sav"
 )
