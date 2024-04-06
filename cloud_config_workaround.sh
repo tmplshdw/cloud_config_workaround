@@ -41,6 +41,10 @@ case ${SteamAppId} in
         CONFIG_PATH="Documents/My Games/NieR_Automata"
         CONFIG="SystemData.dat"
         ;;
+    1113560)
+        CONFIG_PATH="Documents/My Games/NieR Replicant ver.1.22474487139/Steam/${STEAMID}"
+        CONFIG="drawing_settings.ini"
+        ;;
     757310)
         CONFIG_PATH="AppData/LocalLow/Shedworks/Sable/SaveData"
         CONFIG="SettingsManager"
