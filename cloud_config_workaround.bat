@@ -78,7 +78,11 @@ if %SteamAppId%==1608070 (
             set "GAMECONFIG=SAVEDATA_SYSTEM.sav"
 )
 if %SteamAppId%==1850570 (
-            set "GAMECONFIGDIR=%LOCALAPPDATA%\KojimaProductions\DeathStrandingDC\%SteamID3%"
+            set "GAMECONFIGDIR=%LOCALAPPDATA%\KojimaProductions\DeathStrandingDC\%SteamID3%\profile"
+            set "GAMECONFIG=game_settings.cfg"
+)
+if %SteamAppId%==1190460 (
+            set "GAMECONFIGDIR=%LOCALAPPDATA%\KojimaProductions\DeathStranding\%SteamID3%\profile"
             set "GAMECONFIG=game_settings.cfg"
 )
 if %SteamAppId%==2337640 (
