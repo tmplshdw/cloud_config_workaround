@@ -77,6 +77,10 @@ case ${SteamAppId} in
         CONFIG_PATH="AppData/Local/KojimaProductions/DeathStranding/${SteamID3}/profile"
         CONFIG="game_settings.cfg"
         ;;
+    2337640)
+        CONFIG_PATH="AppData/Local/PinballM/Saved/SaveGames/${STEAMID}"
+        CONFIG="settings.sav"
+        ;;
     *)
         CONFIG="error"
         ;;
