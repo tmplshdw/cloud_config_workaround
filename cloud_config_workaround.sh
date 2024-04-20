@@ -69,6 +69,14 @@ case ${SteamAppId} in
         CONFIG_PATH="Documents/My Games/CRISIS CORE FINAL FANTASY VII REUNION/Steam/${STEAMID}"
         CONFIG="SAVEDATA_SYSTEM.sav"
         ;;
+    1850570)
+        CONFIG_PATH="AppData/Local/KojimaProductions/DeathStrandingDC/${SteamID3}/profile"
+        CONFIG="game_settings.cfg"
+        ;;
+    1190460)
+        CONFIG_PATH="AppData/Local/KojimaProductions/DeathStranding/${SteamID3}/profile"
+        CONFIG="game_settings.cfg"
+        ;;
     2337640)
         CONFIG_PATH="AppData/Local/PinballM/Saved/SaveGames/${STEAMID}"
         CONFIG="settings.sav"
