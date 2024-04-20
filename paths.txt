@@ -1,0 +1,16 @@
+814380;Application Data/Sekiro/GraphicsConfig.xml
+292030;Documents/The Witcher 3/user.settings
+499450;Documents/The Witcher 3/user.settings
+32360;Application Data/LucasArts/The Secret of Monkey Island Special Edition/Settings.ini
+1151640;Documents/Horizon Zero Dawn/Saved Game/profile/graphicsconfig.ini
+1313140;AppData/LocalLow/Massive Monster/Cult Of The Lamb/saves/settings.json
+524220;Documents/My Games/NieR_Automata/SystemData.dat
+1113560;Documents/My Games/NieR Replicant ver.1.22474487139/Steam/${STEAMID}/drawing_settings.ini
+757310;AppData/LocalLow/Shedworks/Sable/SaveData/SettingsManager
+1295510;Documents/My Games/DRAGON QUEST XI S/Steam/${SteamID3}/Saved/SaveGames/Book/system999.sav
+1687950;Application Data/SEGA/P5R/Steam/${STEAMID}/savedata/SYSTEM/SYSTEM.DAT
+1730680;AppData/Local/Bandai Namco Entertainment/KLONOAencore/Saved/SaveGames/${SteamID3}/System.bin
+990080;AppData/Local/Hogwarts Legacy/Saved/SaveGames/${SteamID3}/SavedUserOptions.sav
+1608070;Documents/My Games/CRISIS CORE FINAL FANTASY VII REUNION/Steam/${STEAMID}/SAVEDATA_SYSTEM.sav
+2337640;AppData/Local/PinballM/Saved/SaveGames/${STEAMID}/settings.sav
+

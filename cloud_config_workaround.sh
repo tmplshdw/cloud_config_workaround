@@ -15,73 +15,14 @@ STEAMID=$(grep -Pzo '"'${SteamUser}'"\s+{\s+"SteamID"\s+"[0-9]+"' /home/${USER}/
 # get SteamID3 version by converting 64 Bit SteamID
 SteamID3=$((${STEAMID}-76561197960265728))
 
-# get location of config file used in game based on steam appid
-case ${SteamAppId} in
-    814380)
-        CONFIG_PATH="Application Data/Sekiro"
-        CONFIG="GraphicsConfig.xml"
-        ;;
-    292030 | 499450) # 499450 GOTY edition, not sure if necessary
-        CONFIG_PATH="Documents/The Witcher 3"
-        CONFIG="user.settings"
-        ;;
-    32360)
-        CONFIG_PATH="Application Data/LucasArts/The Secret of Monkey Island Special Edition"
-        CONFIG="Settings.ini"
-        ;;
-    1151640)
-        CONFIG_PATH="Documents/Horizon Zero Dawn/Saved Game/profile"
-        CONFIG="graphicsconfig.ini"
-        ;;
-    1313140)
-        CONFIG_PATH="AppData/LocalLow/Massive Monster/Cult Of The Lamb/saves"
-        CONFIG="settings.json"
-        ;;
-    524220)
-        CONFIG_PATH="Documents/My Games/NieR_Automata"
-        CONFIG="SystemData.dat"
-        ;;
-    1113560)
-        CONFIG_PATH="Documents/My Games/NieR Replicant ver.1.22474487139/Steam/${STEAMID}"
-        CONFIG="drawing_settings.ini"
-        ;;
-    757310)
-        CONFIG_PATH="AppData/LocalLow/Shedworks/Sable/SaveData"
-        CONFIG="SettingsManager"
-        ;;
-    1295510)
-        CONFIG_PATH="Documents/My Games/DRAGON QUEST XI S/Steam/${SteamID3}/Saved/SaveGames/Book"
-        CONFIG="system999.sav"
-        ;;
-    1687950)
-        CONFIG_PATH="Application Data/SEGA/P5R/Steam/${STEAMID}/savedata/SYSTEM"
-        CONFIG="SYSTEM.DAT"
-        ;;
-    1730680)
-        CONFIG_PATH="AppData/Local/Bandai Namco Entertainment/KLONOAencore/Saved/SaveGames/${SteamID3}"
-        CONFIG="System.bin"
-        ;;
-    990080)
-        CONFIG_PATH="AppData/Local/Hogwarts Legacy/Saved/SaveGames/${SteamID3}"
-        CONFIG="SavedUserOptions.sav"
-        ;;
-    1608070)
-        CONFIG_PATH="Documents/My Games/CRISIS CORE FINAL FANTASY VII REUNION/Steam/${STEAMID}"
-        CONFIG="SAVEDATA_SYSTEM.sav"
-        ;;
-    2337640)
-        CONFIG_PATH="AppData/Local/PinballM/Saved/SaveGames/${STEAMID}"
-        CONFIG="settings.sav"
-        ;;
-    *)
-        CONFIG="error"
-        ;;
-esac
+# get the path of config from the paths.txt file
+CONFIG_PATH=$(grep ${SteamAppId} "$(dirname $0)/paths.txt" | cut --delimiter=';' --fields=2 -)
+CONFIG=${CONFIG_PATH##*/} #https://stackoverflow.com/a/23497364
 
 # STEAM_COMPAT_DATA_PATH is set by Steam to be the location for the prefix used by the game
 # by default ~/.local/share/Steam/steamapps/compatdata/$SteamAppId
 # but may be elsewhere depending on how you set up your steam library storage
-GAME_CONFIG_PATH="${STEAM_COMPAT_DATA_PATH}/${WIN_USER_PATH}/${CONFIG_PATH}/${CONFIG}"
+GAME_CONFIG_PATH="${STEAM_COMPAT_DATA_PATH}/${WIN_USER_PATH}/${CONFIG_PATH}"
 echo "game config file: ${GAME_CONFIG_PATH}" >> ${LOGFILE} 2>&1
 
 if [ "${CONFIG}" = "error" ]; then # run the game without workaround
