@@ -13,6 +13,6 @@
 990080;%USERPROFILE%/AppData/Local/Hogwarts Legacy/Saved/SaveGames/%SteamID3%;SavedUserOptions.sav
 1608070;%DOCUMENTS%/My Games/CRISIS CORE FINAL FANTASY VII REUNION/Steam/%STEAMID%;SAVEDATA_SYSTEM.sav
 2337640;%USERPROFILE%/AppData/Local/PinballM/Saved/SaveGames/%STEAMID%;settings.sav
-1850570;%LOCALAPPDATA%/KojimaProductions/DeathStrandingDC/%SteamID3%/profile;game_settings.cfg"
-1190460;%LOCALAPPDATA%/KojimaProductions/DeathStranding/%SteamID3%/profile;game_settings.cfg"
+1850570;%LOCALAPPDATA%/KojimaProductions/DeathStrandingDC/%SteamID3%/profile;game_settings.cfg
+1190460;%LOCALAPPDATA%/KojimaProductions/DeathStranding/%SteamID3%/profile;game_settings.cfg
 
