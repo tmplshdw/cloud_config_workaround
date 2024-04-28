@@ -15,6 +15,7 @@ Currently works for:
 * Klonoa Phantasy Reverie Series
 * Hogwarts Legacy
 * CRISIS CORE –FINAL FANTASY VII– REUNION
+* DEATH STRANDING
 * Pinball M
 
 Please create a new issue for other games that also need a workaround
