@@ -38,9 +38,10 @@ exit
 
 :workaround
 :: copy the wanted config file to the location used by game
-robocopy "%GOODCONFIGSDIR%\%SteamAppId%" "%CONFIGPATH%" "%GAMECONFIG%" /V 
+robocopy "%GOODCONFIGSDIR%\%SteamAppId%" "%CONFIGPATH%" "%GAMECONFIG%" /LOG:%GOODCONFIGSDIR%\%SteamAppId%_config_workaround.log
 :: this is %command% (i.e. the game exe) and any parameters from the launch options
 %*
 :: save any config changes you made in-game for next time
-robocopy "%CONFIGPATH%" "%GOODCONFIGSDIR%\%SteamAppId%" "%GAMECONFIG%" /V
+robocopy "%CONFIGPATH%" "%GOODCONFIGSDIR%\%SteamAppId%" "%GAMECONFIG%" /LOG+:%GOODCONFIGSDIR%\%SteamAppId%_config_workaround.log
+
 exit
