@@ -15,4 +15,4 @@
 2337640;%USERPROFILE%/AppData/Local/PinballM/Saved/SaveGames/%STEAMID%;settings.sav
 1850570;%LOCALAPPDATA%/KojimaProductions/DeathStrandingDC/%SteamID3%/profile;game_settings.cfg
 1190460;%LOCALAPPDATA%/KojimaProductions/DeathStranding/%SteamID3%/profile;game_settings.cfg
-
+2552450;%DOCUMENTS%/My Games/KINGDOM HEARTS III/Steam/76561198065690853/Config;GameUserSettings.ini
