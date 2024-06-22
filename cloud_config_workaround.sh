@@ -23,12 +23,12 @@ CONFIG=$(grep ${SteamAppId} ${PATHS_FILE} | cut --delimiter=';' --fields=3 -)
 
 # replace Windows path variables with their equivalent for Proton prefix
 CONFIG_PATH=$(echo ${CONFIG_PATH} | sed \
-    -e 's/%APPDATA%/Application Data/'\
-    -e 's/%DOCUMENTS%/Documents/'\
-    -e 's/%USERPROFILE%//'\
-    -e 's/%LOCALAPPDATA%/AppData\/Local/'\
-    -e 's/%STEAMID%/\${STEAMID}/'\
-    -e 's/%SteamID3%/\${SteamID3}/'\
+    -e "s/%APPDATA%/Application Data/"\
+    -e "s/%DOCUMENTS%/Documents/"\
+    -e "s/%USERPROFILE%//"\
+    -e "s/%LOCALAPPDATA%/AppData\/Local/"\
+    -e "s/%STEAMID%/${STEAMID}/"\
+    -e "s/%SteamID3%/${SteamID3}/"\
 )
 
 # STEAM_COMPAT_DATA_PATH is set by Steam to be the location for the prefix used by the game
