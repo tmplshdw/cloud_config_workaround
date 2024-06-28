@@ -15,4 +15,6 @@
 2337640;%USERPROFILE%/AppData/Local/PinballM/Saved/SaveGames/%STEAMID%;settings.sav
 1850570;%LOCALAPPDATA%/KojimaProductions/DeathStrandingDC/%SteamID3%/profile;game_settings.cfg
 1190460;%LOCALAPPDATA%/KojimaProductions/DeathStranding/%SteamID3%/profile;game_settings.cfg
-
+2552430;%DOCUMENTS%/My Games/KINGDOM HEARTS HD 1.5+2.5 ReMIX/Steam/%STEAMID%;config1525.dat
+2552440;%DOCUMENTS%/My Games/KINGDOM HEARTS HD 2.8 Final Chapter Prologue/Steam/%STEAMID%;config28.dat
+2552450;%DOCUMENTS%/My Games/KINGDOM HEARTS III/Steam/%STEAMID%/Config;GameUserSettings.ini

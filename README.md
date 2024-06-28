@@ -17,6 +17,9 @@ Currently works for:
 * CRISIS CORE –FINAL FANTASY VII– REUNION
 * DEATH STRANDING
 * Pinball M
+* KINGDOM HEARTS HD 1.5+2.5 ReMIX
+* KINGDOM HEARTS HD 2.8 Final Chapter Prologue
+* KINGDOM HEARTS III + Re Mind (DLC)
 
 ## Game not on the list?
 Please create a new issue with the AppId and game name.
