@@ -18,3 +18,4 @@
 2552430;%DOCUMENTS%/My Games/KINGDOM HEARTS HD 1.5+2.5 ReMIX/Steam/%STEAMID%;config1525.dat
 2552440;%DOCUMENTS%/My Games/KINGDOM HEARTS HD 2.8 Final Chapter Prologue/Steam/%STEAMID%;config28.dat
 2552450;%DOCUMENTS%/My Games/KINGDOM HEARTS III/Steam/%STEAMID%/Config;GameUserSettings.ini
+632470;%USERPROFILE%/AppData/LocalLow/ZAUM Studio/Disco Elysium/Settings;Settings.json
