@@ -3,7 +3,8 @@
 # location to keep good local config files
 GOOD_CONFIGS_PATH="/home/${USER}/Documents/game_configs"
 # location of paths.txt file containing the config paths for games, default in script directory
-PATHS_FILE="$(dirname $0)/paths.txt"
+PATHS_FILE="$(dirname $(readlink -f $0))/paths.txt"
+
 LOGFILE="${GOOD_CONFIGS_PATH}/${SteamAppId}_config_workaround.log"
 # user directory in the proton prefix
 WIN_USER_PATH="pfx/drive_c/users/steamuser"
