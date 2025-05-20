@@ -21,4 +21,4 @@
 632470;%USERPROFILE%/AppData/LocalLow/ZAUM Studio/Disco Elysium/Settings;Settings.json
 2679460;%APPDATA%/SEGA/METAPHOR/%STEAMID%;pcconfig.dat
 1979440;%LOCALAPPDATA%/SANDLAND/Saved/SaveGames/%SteamID3%;System.sav
-1384160;%LOCALAPPDATA%/GGST/Saved/SaveGames/%SteamID3%;System.sav
+1384160;%LOCALAPPDATA%/GGST/Saved/SaveGames/%SteamID3%;SYSTEM.sav
