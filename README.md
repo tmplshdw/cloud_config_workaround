@@ -22,6 +22,7 @@ Currently works for:
 * KINGDOM HEARTS III + Re Mind (DLC)
 * Disco Elysium - The Final Cut
 * SAND LAND
+* GUILTY GEAR -STRIVE-
 
 ## Game not on the list?
 Please create a new issue with the AppId and game name.
