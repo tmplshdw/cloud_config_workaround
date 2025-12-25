@@ -23,6 +23,7 @@ Currently works for:
 * Disco Elysium - The Final Cut
 * SAND LAND
 * GUILTY GEAR -STRIVE-
+* Clair Obscur: Expedition 33
 
 ## Game not on the list?
 Please create a new issue with the AppId and game name.
