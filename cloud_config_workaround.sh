@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # location to keep good local config files
 GOOD_CONFIGS_PATH="/home/${USER}/Documents/game_configs"
@@ -31,19 +31,60 @@ CONFIG_PATH=$(echo ${CONFIG_PATH} | sed \
     -e "s/%SteamID3%/${SteamID3}/"\
 )
 
+if [ "$SteamAppId" = "292030" ] || [ "$SteamAppId" = "499450" ]; then
+    GAMEEXE="witcher3.exe"
+    GAMEDIR="bin\\x64_dx12"
+
+    if [ -f "launcher-configuration.json" ]; then
+        FALLBACK_RAW=$(grep -i '"fallback"' launcher-configuration.json 2>/dev/null | cut -d: -f2)
+
+        if [ -n "$FALLBACK_RAW" ]; then
+            FALLBACK=$(echo "$FALLBACK_RAW" | tr -d '",\r' | xargs)
+            FALLBACK_LOWER="${FALLBACK,,}"
+
+            if [ "$FALLBACK_LOWER" = "directx 11" ]; then
+                GAMEDIR="bin\\x64"
+            elif [ "$FALLBACK_LOWER" = "directx 12" ]; then
+                GAMEDIR="bin\\x64_dx12"
+            fi
+        fi
+    fi
+fi
+
 # STEAM_COMPAT_DATA_PATH is set by Steam to be the location for the prefix used by the game
 # by default ~/.local/share/Steam/steamapps/compatdata/$SteamAppId
 # but may be elsewhere depending on how you set up your steam library storage
 GAME_CONFIG_PATH="${STEAM_COMPAT_DATA_PATH}/${WIN_USER_PATH}/${CONFIG_PATH}"
 
-if [ -z ${CONFIG} ]; then # run the game without workaround
+if [ -z "${CONFIG}" ]; then # run the game without workaround
     echo "error" >> ${LOGFILE} 2>&1
     "$@" # filled in with %command% (game executable stuff) and any other launch options
 else
     # copy the wanted config file to the location used by game
     cp -v "${GOOD_CONFIGS_PATH}/${SteamAppId}/${CONFIG}" "${GAME_CONFIG_PATH}" >> "${LOGFILE}" 2>&1
 
-    "$@" # filled in with %command% (game executable stuff) and any other launch options
+    # Check if we defined a custom exe
+if [ -n "$GAMEEXE" ]; then
+    # 1. Convert any Windows backslashes in GAMEDIR to Linux forward slashes
+    GAMEDIR="${GAMEDIR//\\//}"
+
+    # 2. Rebuild the Steam launch command
+    NEW_CMD=()
+    for arg in "$@"; do
+        # If the argument ends in .exe, replace it with our custom path
+        if [[ "${arg,,}" == *".exe" ]]; then
+            NEW_CMD+=("$PWD/$GAMEDIR/$GAMEEXE")
+        else
+            NEW_CMD+=("$arg")
+        fi
+    done
+
+    # 3. Execute the modified Proton command
+    "${NEW_CMD[@]}"
+else
+    # Run the default command if no custom exe is set
+    "$@"
+fi
 
     # save any config changes you made in-game for next time
     cp -v "${GAME_CONFIG_PATH}/${CONFIG}" "${GOOD_CONFIGS_PATH}/${SteamAppId}/" >> "${LOGFILE}" 2>&1
