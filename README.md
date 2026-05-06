@@ -48,6 +48,8 @@ If you successfully add another game please open a pull request so others can be
 
 ### Linux/Steam Deck
 
+--Please note that fuser is required for this script to function, which is part of the psmisc package--
+
 Download the script somewhere and make sure it's set as executable.
 Also save the paths.txt file in the same place.
 
@@ -58,7 +60,6 @@ Alternatively just use git:
 Add the launch option to the relevant game (change the location if you save it elsewhere)
 
 `/home/$USER/cloud_config_workaround.sh %command%`
-
 
 ### Windows
 
