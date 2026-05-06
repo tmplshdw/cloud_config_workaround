@@ -44,7 +44,12 @@ else
     cp -v "${GOOD_CONFIGS_PATH}/${SteamAppId}/${CONFIG}" "${GAME_CONFIG_PATH}" >> "${LOGFILE}" 2>&1
 
     "$@" # filled in with %command% (game executable stuff) and any other launch options
-
+    
+    # Waits for files to be released by services like wineserver before attempting to copy
+    while fuser "${GAME_CONFIG_PATH}/${CONFIG}" >/dev/null 2>&1; do
+        sleep 0.5
+    done
+    
     # save any config changes you made in-game for next time
     cp -v "${GAME_CONFIG_PATH}/${CONFIG}" "${GOOD_CONFIGS_PATH}/${SteamAppId}/" >> "${LOGFILE}" 2>&1
 fi
