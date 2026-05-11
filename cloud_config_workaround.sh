@@ -29,6 +29,7 @@ CONFIG_PATH=$(echo ${CONFIG_PATH} | sed \
     -e "s/%LOCALAPPDATA%/AppData\/Local/"\
     -e "s/%STEAMID%/${STEAMID}/"\
     -e "s/%SteamID3%/${SteamID3}/"\
+    -e "s/^\///" \
 )
 
 # STEAM_COMPAT_DATA_PATH is set by Steam to be the location for the prefix used by the game
