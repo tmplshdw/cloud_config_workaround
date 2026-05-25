@@ -11,8 +11,8 @@ WIN_USER_PATH="pfx/drive_c/users/steamuser"
 # create a directory to keep good config file
 mkdir -p "${GOOD_CONFIGS_PATH}/${SteamAppId}"
 
-# horrible kludge to get steamid
-STEAMID=$(grep -Pzo '"'${SteamUser}'"\s+{\s+"SteamID"\s+"[0-9]+"' /home/${USER}/.local/share/Steam/config/config.vdf | grep --text -oP '(?<=\s")[0-9]+')
+# get most recently used account's 64 bit Steam ID
+STEAMID=$(grep -Pzoi '"765611\d+"\s*\{\s*[^}]*?"MostRecent"\s*"1"' /home/${USER}/.local/share/Steam/config/loginusers.vdf | grep -a -oP '765611\d+')
 
 # get SteamID3 version by converting 64 Bit SteamID
 SteamID3=$((${STEAMID}-76561197960265728))
@@ -29,6 +29,7 @@ CONFIG_PATH=$(echo ${CONFIG_PATH} | sed \
     -e "s/%LOCALAPPDATA%/AppData\/Local/"\
     -e "s/%STEAMID%/${STEAMID}/"\
     -e "s/%SteamID3%/${SteamID3}/"\
+    -e "s/^\///" \
 )
 
 # STEAM_COMPAT_DATA_PATH is set by Steam to be the location for the prefix used by the game
