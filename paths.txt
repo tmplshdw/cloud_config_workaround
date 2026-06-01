@@ -24,4 +24,3 @@
 1384160;%LOCALAPPDATA%/GGST/Saved/SaveGames/%SteamID3%;SYSTEM.sav
 1903340;%LOCALAPPDATA%/Sandfall/Saved/SaveGames/%STEAMID%;SharedGameUserSettings.sav
 359870;%DOCUMENTS%/SQUARE ENIX/FINAL FANTASY X&X-2 HD Remaster;GameSetting.ini
-
