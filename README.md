@@ -24,7 +24,7 @@ Currently works for:
 * SAND LAND
 * GUILTY GEAR -STRIVE-
 * Clair Obscur: Expedition 33
-*  Final Fantasy X & X-2 HD Remaster
+* Final Fantasy X & X-2 HD Remaster
 
 ## Game not on the list?
 Please create a new issue with the AppId and game name.
