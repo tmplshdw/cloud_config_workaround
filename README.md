@@ -69,6 +69,12 @@ Add the launch option to the relevant game
 
 `\path\to\download\cloud_config_workaround.bat %command%`
 
+#### Controlled folder access
+
+The Windows script stores configs and logs in the `game_configs` directory under your Windows Documents folder, including a redirected OneDrive Documents folder. If Windows Security reports that an unauthorized change was blocked, Controlled folder access may be preventing the script from writing there.
+
+Instead of disabling Controlled folder access, either change `GOODCONFIGSDIR` in `cloud_config_workaround.bat` to a location that is not listed under Protected folders (for example, `%LOCALAPPDATA%\game_configs` on a default Windows setup), or follow [Microsoft's instructions](https://support.microsoft.com/windows/virus-and-threat-protection-in-the-windows-security-app-1362f4cd-d71a-b52a-0b66-c2820032b65e) to review recently blocked apps and allow only an executable you trust.
+
 
 ### If using Flatpak version of Steam:
 Follow Linux/Steam Deck step and ensure you give the Steam Flatpak read/write access to your Documents folder. You may also need to provide read permissions for where you saved the cloud_config_workaround.sh script if you saved it outside your Documents folder. 
