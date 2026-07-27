@@ -58,7 +58,7 @@ Alternatively just use git:
 
 Add the launch option to the relevant game (change the location if you save it elsewhere)
 
-`/home/$USER/cloud_config_workaround.sh %command%`
+`/home/$USER/cloud_config_workaround/cloud_config_workaround.sh %command%`
 
 
 ### Windows
