@@ -23,11 +23,11 @@ mkdir "%GOODCONFIGSDIR%\%SteamAppId%"
 for /f "delims=" %%a in ('powershell.exe -command "$result=%STEAMID%-76561197960265728; Write-Output $result"') do set SteamID3=%%a
 
 :: get location of config file from the paths.txt file based on steam appid
-for /f "tokens=2 delims=;" %%F in ('findstr %SteamAppId% %scriptpath%paths.txt') do set "CONFIGPATH=%%F"
+for /f "tokens=2 delims=;" %%F in ('findstr %SteamAppId% "%scriptpath%paths.txt"') do set "CONFIGPATH=%%F"
 call set "CONFIGPATH=%CONFIGPATH%"
 
 :: get the config file name
-for /f "tokens=3 delims=;" %%F in ('findstr %SteamAppId% %scriptpath%paths.txt') do set "GAMECONFIG=%%F"
+for /f "tokens=3 delims=;" %%F in ('findstr %SteamAppId% "%scriptpath%paths.txt"') do set "GAMECONFIG=%%F"
 call set "GAMECONFIG=%GAMECONFIG%"
 
 :: if this is defined then it's a game in the list so use the workaround
