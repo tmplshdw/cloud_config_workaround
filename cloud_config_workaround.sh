@@ -12,7 +12,17 @@ WIN_USER_PATH="pfx/drive_c/users/steamuser"
 mkdir -p "${GOOD_CONFIGS_PATH}/${SteamAppId}"
 
 # get most recently used account's 64 bit Steam ID
-STEAMID=$(grep -Pzoi '"765611\d+"\s*\{\s*[^}]*?"MostRecent"\s*"1"' /home/${USER}/.local/share/Steam/config/loginusers.vdf | grep -a -oP '765611\d+')
+STEAMID=$(awk -F'"' '
+    { line = tolower($0) }
+    line ~ /^[ \t]*"765611/ { id = $2 }
+    line ~ /^[ \t]*"timestamp"/ { if ($4 > max) { max = $4; best = id } }
+    END { print best }
+' "/home/${USER}/.local/share/Steam/config/loginusers.vdf")
+
+# Fallback to config.vdf using $SteamUser if loginusers.vdf parsing returned nothing
+if [ -z "${STEAMID}" ]; then
+    STEAMID=$(grep -Pzo '"'${SteamUser}'"\s+{\s+"SteamID"\s+"[0-9]+"' /home/${USER}/.local/share/Steam/config/config.vdf | grep --text -oP '(?<=\s")[0-9]+')
+fi
 
 # get SteamID3 version by converting 64 Bit SteamID
 SteamID3=$((${STEAMID}-76561197960265728))
