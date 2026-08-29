@@ -19,6 +19,11 @@ STEAMID=$(awk -F'"' '
     END { print best }
 ' "/home/${USER}/.local/share/Steam/config/loginusers.vdf")
 
+# Fallback to config.vdf using $SteamUser if loginusers.vdf parsing returned nothing
+if [ -z "${STEAMID}" ]; then
+    STEAMID=$(grep -Pzo '"'${SteamUser}'"\s+{\s+"SteamID"\s+"[0-9]+"' /home/${USER}/.local/share/Steam/config/config.vdf | grep --text -oP '(?<=\s")[0-9]+')
+fi
+
 # get SteamID3 version by converting 64 Bit SteamID
 SteamID3=$((${STEAMID}-76561197960265728))
 
