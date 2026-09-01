@@ -25,6 +25,7 @@ Currently works for:
 * GUILTY GEAR -STRIVE-
 * Clair Obscur: Expedition 33
 * Final Fantasy X & X-2 HD Remaster
+* Star Ocean Second Story R
 
 ## Game not on the list?
 Please create a new issue with the AppId and game name.
